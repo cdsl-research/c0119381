@@ -8,11 +8,11 @@ def handle_interrupt(pin):
   global interrupt_pin
   interrupt_pin = pin 
 
-pir1 = Pin(35, Pin.IN)
-pir2 = Pin(34, Pin.IN)
+sensor1 = Pin(35, Pin.IN)
+sensor2 = Pin(34, Pin.IN)
 
-pir1.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
-pir2.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
+sensor1.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
+sensor2.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
 
 num = 0
 
